@@ -33,7 +33,7 @@ filetype plugin indent on    " required
 
 
 " ----------- My Stuff  ------
-  "
+"
 nnoremap œ :tabprevious<CR>
 nnoremap ∑ :tabnext<CR>
 nnoremap † :tabnew<CR>
@@ -83,11 +83,8 @@ set autoindent " Auto indention should be on
 
 let g:neocomplete#enable_at_startup = 1
 
-
-let g:airline#extensions#tabline#enabled = 1
 let laststatus=2
-let ambiwidth=2
-set fillchars+=stl:\ ,stlnc:\
+
 
 colorscheme sunburst
 set background=dark
@@ -122,7 +119,7 @@ map <leader>r :r<cr> " \r to jump to related file
 map <leader>E :Explore .<cr> " \E to open file explorer in root
 map <leader>e :Explore<cr> " \e to open file explorer in current dir
 
-let g:airline_powerline_fonts=1
+"let g:airline_powerline_fonts=1
 set laststatus=2
 
 set cursorline
@@ -178,3 +175,11 @@ if exists("+undofile")
   set undodir+=~/.vim/undo//
   set undofile
 endif
+
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
+
