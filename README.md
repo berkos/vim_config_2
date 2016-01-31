@@ -4,7 +4,7 @@ my vim configurations
 
 ``cd ~``
 
-``git clone``
+``git clone git@github.com:berkos/vim_config_2.git``
 
 ``ln -s ~/vim_config_2/.vimrc ~/.vimrc``
 
